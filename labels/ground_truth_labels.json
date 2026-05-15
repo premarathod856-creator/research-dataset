@@ -1,1 +1,50 @@
-
+{
+  "dataset_info": {
+    "name": "CloudShield Cloud-Native Attack Dataset",
+    "version": "1.0",
+    "total_duration_hours": 72,
+    "total_attacks": 100
+  },
+  "attack_categories": {
+    "lateral_movement": {
+      "count": 20,
+      "description": "Compromise low-value service, move to database"
+    },
+    "data_exfiltration": {
+      "count": 20,
+      "description": "Service sending large data to external IP"
+    },
+    "privilege_escalation": {
+      "count": 20,
+      "description": "User accessing admin APIs without permission"
+    },
+    "zero_day_simulation": {
+      "count": 20,
+      "description": "Novel sequence of API calls, no signature"
+    },
+    "slow_drip": {
+      "count": 20,
+      "description": "Small anomalies spread over 24 hours"
+    }
+  },
+  "attacks": [
+    {
+      "attack_id": "LM_001",
+      "category": "lateral_movement",
+      "start_time": "2026-05-14T02:03:15Z",
+      "end_time": "2026-05-14T02:04:10Z",
+      "target_services": ["frontend", "product-catalog", "payment", "postgres"],
+      "successful": true,
+      "detection_time_ms": 35
+    },
+    {
+      "attack_id": "LM_002",
+      "category": "lateral_movement",
+      "start_time": "2026-05-14T11:22:00Z",
+      "end_time": "2026-05-14T11:22:55Z",
+      "target_services": ["shopping-cart", "inventory", "payment", "postgres"],
+      "successful": false,
+      "detection_time_ms": 28
+    }
+  ]
+}
