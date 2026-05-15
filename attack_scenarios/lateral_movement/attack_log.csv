@@ -1,1 +1,16 @@
 
+timestamp,src_service,dst_service,request_type,response_time_ms,bytes_sent,bytes_received,status_code,user_id,is_attack,attack_id,attack_type,attack_phase
+2026-05-14T02:03:15Z,frontend,product-catalog,GET,487,12800,2820,200,user_4531,1,LM_001,lateral_movement,phase1_compromise
+2026-05-14T02:03:17Z,frontend,product-catalog,GET,512,13500,2840,200,user_4531,1,LM_001,lateral_movement,phase1_compromise
+2026-05-14T02:03:19Z,frontend,product-catalog,GET,498,13100,2830,200,user_4531,1,LM_001,lateral_movement,phase1_compromise
+2026-05-14T02:03:21Z,frontend,product-catalog,POST,534,14200,2850,500,user_4531,1,LM_001,lateral_movement,phase1_compromise
+2026-05-14T02:03:23Z,frontend,product-catalog,GET,476,12600,2810,200,user_4531,1,LM_001,lateral_movement,phase1_compromise
+2026-05-14T02:03:35Z,frontend,payment,POST,1780,20800,430,403,user_4531,1,LM_001,lateral_movement,phase2_lateral
+2026-05-14T02:03:40Z,frontend,payment,POST,1650,20500,420,403,user_4531,1,LM_001,lateral_movement,phase2_lateral
+2026-05-14T02:03:45Z,frontend,payment,POST,1890,21200,450,200,user_4531,1,LM_001,lateral_movement,phase2_lateral
+2026-05-14T02:03:47Z,payment,postgres,SELECT,234,190,8900,200,internal,1,LM_001,lateral_movement,phase3_exfil
+2026-05-14T02:03:49Z,payment,postgres,SELECT,245,195,9200,200,internal,1,LM_001,lateral_movement,phase3_exfil
+2026-05-14T02:03:51Z,payment,postgres,SELECT,228,188,9050,200,internal,1,LM_001,lateral_movement,phase3_exfil
+2026-05-14T02:03:53Z,payment,postgres,SELECT,267,2100,125000,200,internal,1,LM_001,lateral_movement,phase3_exfil
+2026-05-14T02:03:55Z,payment,postgres,SELECT,289,2150,128000,200,internal,1,LM_001,lateral_movement,phase3_exfil
+2026-05-14T02:04:10Z,payment,54.234.12.89,POST,4560,98700,1200,200,internal,1,LM_001,lateral_movement,phase4_outbound
