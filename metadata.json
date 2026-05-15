@@ -1,1 +1,37 @@
-
+{
+  "cluster_config": {
+    "platform": "AWS",
+    "region": "us-west-2",
+    "node_count": 15,
+    "instance_type": "t3.medium",
+    "kubernetes_version": "1.28",
+    "cni_plugin": "Calico"
+  },
+  "applications": {
+    "e_commerce": {
+      "services": ["frontend", "product-catalog", "shopping-cart", "payment", "inventory"],
+      "databases": ["redis", "postgres"],
+      "avg_requests_per_second": 3500
+    },
+    "financial_processor": {
+      "services": ["account-service", "fraud-detection", "ledger", "notification"],
+      "databases": ["postgres", "kafka"],
+      "avg_requests_per_second": 1500
+    }
+  },
+  "traffic_generation": {
+    "tool": "Locust",
+    "peak_rps": 5000,
+    "duration_hours": 72
+  },
+  "attack_injection": {
+    "tool": "Custom Chaos Mesh plugin",
+    "attack_count": 100,
+    "stealth_mode": true
+  },
+  "data_format": {
+    "separator": ",",
+    "encoding": "utf-8",
+    "anonymization": "IPs hashed, user_ids pseudonymized, API keys removed"
+  }
+}
