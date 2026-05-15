@@ -1,1 +1,9 @@
 
+{
+  "category": "lateral_movement",
+  "attack_count": 20,
+  "description": "Lateral Movement attacks",
+  "total_requests": 280,
+  "attack_phases": ["phase1_compromise", "phase2_lateral", "phase3_exfil", "phase4_outbound"],
+  "typical_duration_seconds": 55
+}
